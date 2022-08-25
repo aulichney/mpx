@@ -135,6 +135,10 @@ python run.py scatterplot_report_CE --path_dataset_config="./data/configs/datase
 A similar script exists for creating the scatter plots shown in the paper.
 
 ```bash
+python run.py scatterplot_report_CE --path_dataset_config="./data/configs/dataset_AB.json" --path_model="./data/models/AB_vgg16_plateaufast_0" --path_output="./data/reports/eclad_AB_vgg16_plateaufast_0" --path_analysis="./data/results/ace_AB_vgg16_plateaufast_0" --path_association="data/association/ace_AB_vgg16_plateaufast_0" 2>&1 | tee -a "./data/logs/ace_reports_AB_vgg16_plateaufast_0.txt"
+```
+
+```bash
 # create a scatter plot
 python run.py scatterplot_report_CE --path_dataset_config="./data/configs/dataset_${dataset}.json" --path_model="./data/models/${dataset}_${model}_${regime}_${seed}" --path_output="./data/reports/eclad_${dataset}_${model}_${regime}_${seed}_${variant}" --path_analysis="./data/results/eclad_${dataset}_${model}_${regime}_${seed}_${variant}" --path_association="data/association/eclad_${dataset}_${model}_${regime}_${seed}_${variant}" 2>&1 | tee -a "./data/logs/eclad_reports_${dataset}_${model}_${regime}_${seed}_${variant}.txt"
 
